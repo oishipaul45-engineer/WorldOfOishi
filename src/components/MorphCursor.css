@@ -1,0 +1,125 @@
+﻿@media (pointer: fine) {
+  body:has(.morph-system) {
+    cursor: none;
+  }
+
+  body:has(.morph-system) a,
+  body:has(.morph-system) button {
+    cursor: none;
+  }
+}
+
+.morph-system {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .25s ease;
+}
+
+.morph-system.visible {
+  opacity: 1;
+}
+
+.morph-cursor,
+.morph-trail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.morph-cursor {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+}
+
+.morph-cursor span {
+  font-size: 29px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--cursor-accent);
+  filter: drop-shadow(0 0 8px var(--cursor-accent));
+  transition: color .3s, font-size .2s;
+}
+
+.morph-trail {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: 1px solid var(--cursor-accent);
+  box-shadow:
+    0 0 20px var(--cursor-accent),
+    inset 0 0 18px color-mix(
+      in srgb,
+      var(--cursor-accent) 20%,
+      transparent
+    );
+  opacity: .4;
+  transition: border-color .3s, box-shadow .3s;
+}
+
+.morph-system.is-hovering .morph-cursor span {
+  font-size: 38px;
+}
+
+.morph-system.is-hovering .morph-trail {
+  width: 85px;
+  height: 85px;
+  opacity: .65;
+}
+
+@media (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .morph-system {
+    display: none;
+  }
+}
+
+/* Remove the cursor's surrounding circle completely */
+.morph-trail {
+  display: none !important;
+}
+
+.morph-cursor {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.morph-cursor span {
+  filter: drop-shadow(0 0 8px var(--cursor-accent));
+}
+
+
+/* Mobile: show the project symbol, never the circle */
+@media (pointer: coarse) {
+  .morph-system {
+    display: block !important;
+    opacity: 0;
+    pointer-events: none !important;
+  }
+
+  .morph-system.visible {
+    opacity: 1;
+  }
+
+  .morph-trail {
+    display: none !important;
+  }
+
+  .morph-cursor {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .morph-cursor span {
+    font-size: 32px;
+    filter: drop-shadow(0 0 10px var(--cursor-accent));
+  }
+}
+

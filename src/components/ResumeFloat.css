@@ -1,0 +1,37 @@
+.resume-floating{position:fixed;right:18px;bottom:90px;z-index:90;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:3px;width:192px;min-height:112px;padding:16px 16px 14px;background:#d6ff32;color:#11120d;border:2px solid #11120d;border-radius:4px;box-shadow:7px 7px 0 #ff5a1f,0 14px 45px rgba(0,0,0,.35);transform:rotate(5deg);cursor:pointer;font-family:Arial,Helvetica,sans-serif;transition:transform .2s,box-shadow .2s;line-height:1.1}
+.resume-floating:hover,.resume-floating:focus-visible{transform:rotate(0deg) translateY(-5px);box-shadow:9px 11px 0 #ff5a1f,0 18px 50px rgba(0,0,0,.45)}
+.resume-floating__clip{position:absolute;right:10px;top:7px;font-size:21px;font-weight:900}
+.resume-floating__small{font-size:9px;letter-spacing:.15em;font-weight:800}
+.resume-floating__title{font-size:19px;font-weight:900;letter-spacing:-.04em}
+.resume-floating__hint{font-size:9px;letter-spacing:.12em;font-weight:800;opacity:.75}
+.resume-modal{position:fixed;inset:0;background:rgba(0,0,0,.85);backdrop-filter:blur(12px);z-index:110;display:flex;justify-content:center;align-items:center;padding:22px}
+.resume-modal__panel{display:flex;flex-direction:column;max-width:960px;width:100%;height:min(880px,94vh);background:#111116;border:1px solid rgba(255,255,255,.2);box-shadow:0 25px 95px rgba(0,0,0,.7);border-radius:14px;overflow:hidden;color:#f6f6f6;font-family:Arial,Helvetica,sans-serif}
+.resume-modal__bar{padding:14px 18px;display:flex;justify-content:space-between;align-items:center;gap:12px;background:#17171c;border-bottom:1px solid #37373d}
+.resume-modal__heading{display:flex;flex-direction:column;gap:4px;font-size:11px;letter-spacing:.08em}
+.resume-modal__heading strong{font-size:15px;letter-spacing:.03em;color:#ff7a35}
+.resume-modal__actions{display:flex;align-items:center;gap:12px}
+.resume-modal__download{background:#ff5a1f;color:#111!important;padding:11px 15px;border-radius:6px;text-decoration:none!important;font-size:12px;font-weight:900;white-space:nowrap}
+.resume-modal__close{background:#26262b;color:#fff;border:1px solid #555;border-radius:6px;width:38px;height:38px;font-size:25px;cursor:pointer}
+.resume-modal__viewer{flex:1;width:100%;border:0;background:white}
+.resume-modal__fallback{text-align:center;padding:9px;font-size:11px;color:#bbb}
+.resume-modal__fallback a{color:#d6ff32!important;text-decoration:underline}
+@media(max-width:640px){.resume-floating{right:15px;bottom:18px;width:168px;min-height:96px;padding:11px;box-shadow:4px 5px 0 #ff5a1f}.resume-floating__title{font-size:16px}.resume-modal{padding:8px}.resume-modal__bar{padding:10px}.resume-modal__heading{font-size:9px}.resume-modal__heading strong{font-size:11px}.resume-modal__download{padding:9px;font-size:10px}.resume-modal__actions{gap:6px}.resume-modal__close{width:32px;height:32px}}
+@media(prefers-reduced-motion:reduce){.resume-floating{transition:none}}
+
+/* Fluorescent orange floating résumé sticker */
+.resume-floating {
+  background: #FF5A1F !important;
+  color: #09090D !important;
+  border: 2px solid #FF9A55 !important;
+  box-shadow:
+    0 0 22px rgba(255, 90, 31, 0.45),
+    0 12px 35px rgba(0, 0, 0, 0.35) !important;
+}
+
+.resume-floating button,
+.resume-floating a,
+.resume-floating span,
+.resume-floating svg {
+  color: #09090D !important;
+}
+
