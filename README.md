@@ -43,7 +43,7 @@ I'm **Oishi Paul**, an aspiring AI engineer and full-stack developer drawn to th
 ### ✧ AETHERA
 An immersive personal universe for ideas, thoughts, and connections.
 
-[Explore project](https://aethera-nine.vercel.app/) · [Source](https://github.com/oishipaul45-engineer/AETHERA)
+[Explore project](https://aethera-library.vercel.app/) · [Source](https://github.com/oishipaul45-engineer/AETHERA)
 
 </td><td width="50%" valign="top">
 
